@@ -30,3 +30,31 @@ li {
 li {
   list-style: none;
 }
+
+input {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: none;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: white;
+  transition: 0.2s;
+}
+/* 입력하기위해 클릭하고 커서가 생겼을때 기본적으로 있는 아웃라인 제거 */
+input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #ffe6cf;
+  font-size: 15px;
+}

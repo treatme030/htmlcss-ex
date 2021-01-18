@@ -19,11 +19,24 @@
 
         .search .search-field {
             width: 100%;
+            flex-shrink: 0;
+            transition: 0.5s;
+        }
+        /* flex-shrink: 0;으로 전체 너비 차지했다가 포커스되면 초기값으로 되돌아감 */
+        .search .search-field:focus {
+            flex-shrink: initial;
         }
 
-        .cancel-btn {
+        /* 포커스가 왔을 때 취소 버튼이 보이도록 */
+        .search .search-field:focus ~ .cancel-btn {
+            opacity: 1;
+        }
+
+        .search .cancel-btn {
             flex-shrink: 0;/*flex에서 width가 강제적으로 줄어들지 않도록 함*/
-            margin: 0 0 0 20px;
+            margin-left: 20px;
+            opacity: 0;
+            transition: 0.2s;
         }
 
         .search-icon {
@@ -109,7 +122,7 @@
                 <input class="search-field" placeholder="Search" type="text" >
                 <button class="cancel-btn">취소</button>
             </form>
-                <img class="search-icon" src="img/icon/search.svg" alt="">
+            <img class="search-icon" src="img/icon/search.svg" alt="">
             
         </header>
         

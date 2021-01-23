@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<style>
+
+    /* 헤더 */
+    header {
+        text-align: center;
+        margin-top: 75px;
+    }
+
+    .thumb-wrapper {
+        position: relative;
+        display: inline-block;
+        margin: 36px;
+    }
+
+    .thumb {
+        width: 92px;
+        height: 92px;
+        border-radius: 50%;
+        box-shadow: 0 6px 12px 0 rgba(0,0,0,0.1), 0 12px 24px 0 rgba(0,0,0,0.24);
+    }
+
+    .badge {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+        position: absolute;
+        top: 0;
+        right: -8px;
+        background-color: #ff5500;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;/*flex는 주변에 다른 변화가 있어도 영향을 잘 받지 않음*/
+    }
+
+    .greeting {
+        margin: 0 0 10px 0;
+    }
+
+    .mail {
+        padding: 8px 22px 10px 22px;
+        background-color: rgba(0,0,0,0.05);
+        display: inline-block;/*block요소를 줄 전체를 차지함, inline-block으로 변경하여 요소 크기만큼 넓이 차지하게 함*/
+        border-radius: 20px;
+        margin: 18px 0 0 0;
+        box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08)/*안쪽에 세도우를 줌*/
+        
+    }
+
+    .list {
+        margin: 48px 0 0 0;
+    }
+
+    .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(0,0,0,0.08);
+        font-size: 15px;
+        
+    }
+
+    
+
+    .left {
+        display: flex;
+        align-items: center;
+    }
+
+    .name {
+        margin-left: 6px;
+    }
+
+    .right {
+        opacity: 0.5;
+    }
+
+    .left img {
+        padding: 24px 22px;
+    }
+
+    .right img {
+        padding-right: 14px;
+    }
+
+
+</style>
+<body>
+    <header>
+        <div class="thumb-wrapper">
+            <img class="thumb" src="img/user-thumb.png" alt=""> 
+            <div class="badge">7</div>
+        </div>
+        <div class="text-area">
+            <h2 class="greeting">Hi, Mary Jane</h2>
+            <div class="desc">We'll amke a mobile magazine<br>
+                using html. css only.
+            </div>
+        </div>
+        <div class="mail mouse-effect">
+            <a href="mailto:treatme8192@gmail.com">treatme8192@gmail.com</a>
+        </div>
+    </header>
+
+    <ul class="list">
+        <li class="item mouse-effect">
+            <div class="left">
+                <img src="img/icon/bookmark.svg" alt="">
+                <div class="name">Bookmark</div>
+            </div>
+            <div class="right">
+                <img src="img/icon/right_arrow.svg" alt="">
+            </div>
+        </li>
+        <li class="item mouse-effect">
+            <div class="left">
+                <img src="img/icon/account.svg" alt="">
+                <div class="name">Account info</div>
+            </div>
+            <div class="right">
+                <img src="img/icon/right_arrow.svg" alt="">
+            </div>
+        </li>
+        <li class="item mouse-effect">
+            <div class="left">
+                <img src="img/icon/business.svg" alt="">
+                <div class="name">Business</div>
+            </div>
+            <div class="right">
+                <img src="img/icon/right_arrow.svg" alt="">
+            </div>
+        </li>
+        <li class="item mouse-effect">
+            <div class="left">
+                <img src="img/icon/puzzle.svg" alt="">
+                <div class="name">Blah Blah</div>
+            </div>
+            <div class="right">
+                <img src="img/icon/right_arrow.svg" alt="">
+            </div>
+        </li>
+    </ul>
+</body>
+</html>
